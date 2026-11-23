@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | NESEMBA E-SPORTS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="admin-body" data-admin-page="login"
+style="background:#020817;color:white;">
+    <main class="admin-main">
+        <div class="admin-container">
+
+            <section class="admin-panel">
+
+                <h1 class="admin-title">
+                    NESEMBA
+                    <span style="color:#00c3ff;">ADMIN</span>
+                </h1>
+
+                <p class="admin-subtitle">
+                    E-SPORTS MANAGEMENT SYSTEM 2026
+                </p>
+
+                <hr>
+
+                <h2>Administrator Login</h2>
+
+                <p class="admin-subtitle">
+                    Masuk menggunakan akun administrator.
+                </p>
+
+                <form class="admin-form" id="admin-login-form">
+
+                    <div>
+                        <label for="admin-email">
+                            Email Administrator
+                        </label>
+
+                        <input
+                            type="email"
+                            id="admin-email"
+                            placeholder="Masukkan email"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="admin-password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="admin-password"
+                            placeholder="Masukkan password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="admin-button">
+                        LOGIN ADMIN
+                    </button>
+
+                </form>
+
+                <p id="login-message" class="admin-subtitle"></p>
+
+                <p style="margin-top:25px;">
+                    <a href="../index.html">
+                        ← Kembali ke halaman utama
+                    </a>
+                </p>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+
+</body>
+</html>
+

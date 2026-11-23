@@ -1,0 +1,267 @@
+
+/* =====================================
+   NESEMBA E-SPORTS
+   ADMIN SYSTEM - CYBER BLUE 2026
+===================================== */
+
+:root {
+    --admin-bg: #020817;
+    --admin-panel: #081a32;
+    --admin-panel-light: #0c2340;
+    --admin-blue: #00c3ff;
+    --admin-purple: #8b5cf6;
+    --admin-text: #eaf6ff;
+    --admin-muted: #91abc5;
+    --admin-border: rgba(0, 195, 255, 0.25);
+}
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+body.admin-body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 15% 10%, #07315a, transparent 35%),
+        radial-gradient(circle at 90% 90%, #111b48, transparent 35%),
+        var(--admin-bg);
+    color: var(--admin-text);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* CONTAINER */
+
+.admin-container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+/* HEADER */
+
+.admin-header {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--admin-border);
+    background: rgba(2, 8, 23, 0.85);
+}
+
+.admin-header h1 {
+    margin: 0;
+    color: var(--admin-blue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.admin-header h1 span {
+    color: white;
+}
+
+/* MAIN DASHBOARD */
+
+.admin-main {
+    display: block;
+    min-height: auto;
+    padding: 40px 0;
+}
+
+.admin-panel {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 28px;
+    background: rgba(8, 26, 50, 0.94);
+    border: 1px solid var(--admin-border);
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 195, 255, 0.07);
+    backdrop-filter: blur(12px);
+}
+
+.admin-title {
+    margin: 0 0 18px;
+    color: var(--admin-blue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.admin-subtitle {
+    color: var(--admin-muted);
+}
+
+.admin-status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 13px;
+    color: #72f5b0;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 20px;
+}
+
+/* STATISTICS */
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.admin-stat {
+    padding: 22px;
+    background: var(--admin-panel-light);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.admin-stat:hover {
+    border-color: var(--admin-blue);
+    box-shadow: 0 0 18px rgba(0, 195, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.admin-stat h3 {
+    margin: 0 0 12px;
+    color: var(--admin-muted);
+    font-size: 17px;
+}
+
+.admin-stat strong {
+    color: var(--admin-blue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+}
+
+/* TABLE */
+
+.admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-panel table {
+    width: 100%;
+    min-width: 550px;
+    border-collapse: collapse;
+}
+
+.admin-panel th,
+.admin-panel td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-panel th {
+    color: var(--admin-blue);
+    background: rgba(0, 195, 255, 0.06);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+}
+
+.admin-panel td {
+    color: var(--admin-text);
+    font-size: 15px;
+}
+
+/* BUTTON */
+
+.admin-button {
+    width: 100%;
+    padding: 13px 18px;
+    color: white;
+    background: linear-gradient(90deg, #0066ff, #00bfff);
+    border: 1px solid var(--admin-blue);
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.admin-button:hover {
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* LOGIN PAGE ONLY */
+
+body:not([data-admin-page="dashboard"]) .admin-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 25px;
+}
+
+body:not([data-admin-page="dashboard"]) .admin-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+body:not([data-admin-page="dashboard"]) .admin-panel {
+    padding: 38px 30px;
+    border-color: rgba(0, 195, 255, 0.65);
+    box-shadow:
+        0 0 20px rgba(0, 195, 255, 0.15),
+        0 0 45px rgba(0, 110, 255, 0.1);
+}
+
+body:not([data-admin-page="dashboard"]) .admin-title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #9edfff;
+    font-weight: bold;
+}
+
+.admin-form input {
+    width: 100%;
+    padding: 14px;
+    color: white;
+    background: #061225;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    outline: none;
+}
+
+.admin-form input:focus {
+    border-color: var(--admin-blue);
+    box-shadow: 0 0 12px rgba(0, 195, 255, 0.2);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-panel {
+        padding: 20px;
+    }
+
+    .admin-title {
+        font-size: 18px;
+    }
+
+    .admin-header h1 {
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manajemen Admin | NESEMBA E-SPORTS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <style>
+        .admin-form {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .admin-form input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #00c3ff;
+            background: #0c172b;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .admin-table-wrap {
+            overflow-x: auto;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .admin-table th,
+        .admin-table td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(0,195,255,.2);
+            text-align: left;
+        }
+
+        .admin-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .admin-actions button {
+            cursor: pointer;
+        }
+
+        #admin-message {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body class="admin-body" data-admin-page="admins">
+
+    <header class="admin-header">
+        <div class="admin-container">
+            <h1>NESEMBA <span style="color:white;">ADMIN</span></h1>
+            <p class="admin-subtitle">ADMIN MANAGEMENT SYSTEM</p>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-container">
+
+            <section class="admin-panel">
+                <h2 class="admin-title">MANAJEMEN ADMIN</h2>
+
+                <p class="admin-subtitle">
+                    Halaman khusus Super Admin.
+                </p>
+
+                <button
+                    class="admin-button"
+                    type="button"
+                    onclick="window.location.href='dashboard.html'">
+                    KEMBALI KE DASHBOARD
+                </button>
+            </section>
+
+            <!-- FORM TAMBAH ADMIN -->
+            <section class="admin-panel" style="margin-top:25px;">
+
+                <h2 class="admin-title">TAMBAH ADMIN</h2>
+
+                <form id="create-admin-form" class="admin-form">
+
+                    <input
+                        type="text"
+                        id="new-admin-name"
+                        placeholder="Nama Admin"
+                        required>
+
+                    <input
+                        type="email"
+                        id="new-admin-email"
+                        placeholder="Email Admin"
+                        required>
+
+                    <input
+                        type="password"
+                        id="new-admin-password"
+                        placeholder="Password Admin"
+                        minlength="8"
+                        required>
+
+                    <button
+                        class="admin-button"
+                        type="submit">
+                        TAMBAH ADMIN
+                    </button>
+
+                </form>
+
+                <p id="admin-message"></p>
+
+            </section>
+
+            <!-- DAFTAR ADMIN -->
+            <section class="admin-panel" style="margin-top:25px;">
+
+                <h2 class="admin-title">DAFTAR ADMIN</h2>
+
+                <div class="admin-table-wrap">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="admin-list">
+                            <tr>
+                                <td colspan="4">
+                                    Memuat data admin...
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

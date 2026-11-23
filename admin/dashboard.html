@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | NESEMBA E-SPORTS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="admin-body" data-admin-page="dashboard">
+
+    <header class="admin-header">
+        <div class="admin-container">
+            <h1>NESEMBA <span style="color:white;">ADMIN</span></h1>
+            <p class="admin-subtitle">E-SPORTS MANAGEMENT SYSTEM 2026</p>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-container">
+
+            <section class="admin-panel">
+                <h2 class="admin-title">
+                    CONTROL PANEL
+                </h2>
+
+                <p class="admin-subtitle">
+                    Selamat datang,
+                    <strong id="admin-name">Administrator</strong>
+                </p>
+
+                <span class="admin-status">SYSTEM ONLINE</span>
+            </section>
+
+            <!-- STATISTIK -->
+            <section class="admin-grid">
+
+                <div class="admin-stat">
+                    <h3>Total Peserta</h3>
+                    <strong id="total-participants">0</strong>
+                </div>
+
+                <div class="admin-stat">
+                    <h3>Mobile Legends</h3>
+                    <strong id="total-ml">0</strong>
+                </div>
+
+                <div class="admin-stat">
+                    <h3>Free Fire</h3>
+                    <strong id="total-ff">0</strong>
+                </div>
+
+            </section>
+          
+<!-- MENU ADMIN -->
+<section class="admin-panel">
+
+    <h2 class="admin-title">
+        MANAGEMENT MENU
+    </h2>
+
+    <div class="admin-grid">
+
+        <!-- DATA PESERTA -->
+        <div class="admin-stat">
+            <h3>Data Peserta</h3>
+            <p>Kelola seluruh tim terdaftar.</p>
+
+            <button
+                class="admin-button"
+                type="button"
+                id="manage-participants">
+                KELOLA PESERTA
+            </button>
+        </div>
+
+        <!-- PERTANDINGAN -->
+        <div class="admin-stat">
+            <h3>Pertandingan</h3>
+            <p>Atur jadwal dan hasil pertandingan.</p>
+
+            <button
+                class="admin-button"
+                type="button"
+                id="manage-matches">
+                KELOLA PERTANDINGAN
+            </button>
+        </div>
+
+        <!-- KHUSUS SUPER ADMIN -->
+        <div
+            class="admin-stat"
+            id="admin-management-menu"
+            style="display: none;">
+
+            <h3>Manajemen Admin</h3>
+            <p>Buat, edit, aktifkan, nonaktifkan, dan hapus akun Admin.</p>
+
+            <button
+                class="admin-button"
+                type="button"
+                id="manage-admins">
+                KELOLA ADMIN
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+            <!-- AKTIVITAS -->
+            <section class="admin-panel" style="margin-top:25px;">
+
+                <h2 class="admin-title">
+                    SYSTEM ACTIVITY
+                </h2>
+
+                <p class="admin-subtitle">
+                    Belum ada aktivitas yang tercatat.
+                </p>
+
+            </section>
+
+            <div style="margin-top:25px;">
+                <button
+                    class="admin-button"
+                    id="admin-logout"
+                    type="button">
+                    LOGOUT
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

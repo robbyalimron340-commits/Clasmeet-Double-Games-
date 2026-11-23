@@ -1,0 +1,131 @@
+
+/* =================================
+   NESEMBA E-SPORTS
+   RESPONSIVE DESIGN
+================================= */
+
+/* TABLET */
+@media screen and (max-width: 900px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tournament-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 110px 0 65px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .game-grid,
+    .tournament-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .game-card {
+        padding: 22px;
+    }
+
+    .registration-box {
+        padding: 22px;
+    }
+
+    .participant-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .participant-toolbar input,
+    .participant-toolbar select {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* SMALL MOBILE */
+@media screen and (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Peserta | NESEMBA E-SPORTS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="admin-body" data-admin-page="participants">
+
+    <header class="admin-header">
+        <div class="admin-container">
+            <h1>NESEMBA <span>ADMIN</span></h1>
+            <p class="admin-subtitle">MANAJEMEN DATA PESERTA</p>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-container">
+
+            <section class="admin-panel">
+                <h2 class="admin-title">KELOLA PESERTA</h2>
+                <p class="admin-subtitle">
+                    Daftar seluruh tim yang telah mendaftar.
+                </p>
+
+                <div class="admin-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Tim</th>
+                                <th>Game</th>
+                                <th>Kelas</th>
+                                <th>Kapten</th>
+                                <th>Status</th>
+                              <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+<div class="admin-search">
+    <input
+        type="text"
+        id="search-participants"
+        placeholder="Cari nama tim atau nama kapten..."
+    >
+
+    <select id="filter-game">
+        <option value="">Semua Game</option>
+        <option value="Free Fire">Free Fire</option>
+        <option value="Mobile Legends">Mobile Legends</option>
+    </select>
+</div>
+
+                      
+                        <tbody id="participants-table">
+                            <tr>
+                                <td colspan="6">Memuat data peserta...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <button class="admin-button" type="button"
+                onclick="window.location.href='dashboard.html'">
+                KEMBALI KE DASHBOARD
+            </button>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

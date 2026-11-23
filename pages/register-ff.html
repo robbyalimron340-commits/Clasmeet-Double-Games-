@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Free Fire | NESEMBA E-SPORTS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-body">
+
+<main class="admin-main">
+<div class="admin-container">
+
+    <section class="admin-panel">
+        <h1 class="admin-title">REGISTRASI FREE FIRE</h1>
+        <p class="admin-subtitle">
+            NESEMBA CLASMEETING E-SPORTS 2026
+        </p>
+
+        <p class="admin-status">KUOTA MAKSIMAL 18 TIM</p>
+
+        <form id="ff-registration-form">
+
+            <h2>DATA TIM</h2>
+
+            <label>Nama Tim</label>
+            <input type="text" id="team-name" required>
+
+            <label>Kelas</label>
+            <input type="text" id="team-class" required>
+
+            <h2>PEMAIN 1 — KAPTEN</h2>
+
+            <label>Nama Kapten</label>
+            <input type="text" id="player1" required>
+
+            <label>Role</label>
+            <select id="role1" required>
+                <option value="">Pilih Role</option>
+                <option>Support</option>
+                <option>Rifler</option>
+                <option>Sniper</option>
+                <option>Rusher</option>
+                <option>Bomber</option>
+            </select>
+
+            <h2>PEMAIN 2</h2>
+
+            <label>Nama Pemain</label>
+            <input type="text" id="player2" required>
+
+            <label>Role</label>
+            <select id="role2" required>
+                <option value="">Pilih Role</option>
+                <option>Support</option>
+                <option>Rifler</option>
+                <option>Sniper</option>
+                <option>Rusher</option>
+                <option>Bomber</option>
+            </select>
+
+            <h2>PEMAIN 3</h2>
+
+            <label>Nama Pemain</label>
+            <input type="text" id="player3" required>
+
+            <label>Role</label>
+            <select id="role3" required>
+                <option value="">Pilih Role</option>
+                <option>Support</option>
+                <option>Rifler</option>
+                <option>Sniper</option>
+                <option>Rusher</option>
+                <option>Bomber</option>
+            </select>
+
+            <h2>PEMAIN 4</h2>
+
+            <label>Nama Pemain</label>
+            <input type="text" id="player4" required>
+
+            <label>Role</label>
+            <select id="role4" required>
+                <option value="">Pilih Role</option>
+                <option>Support</option>
+                <option>Rifler</option>
+                <option>Sniper</option>
+                <option>Rusher</option>
+                <option>Bomber</option>
+            </select>
+
+            <button type="submit" class="admin-button">
+                KIRIM PENDAFTARAN
+            </button>
+
+            <p id="ff-message"></p>
+
+        </form>
+
+        <p>
+            <a href="../index.html">Kembali ke halaman utama</a>
+        </p>
+    </section>
+
+</div>
+</main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/registration.js"></script>
+
+</body>
+</html>

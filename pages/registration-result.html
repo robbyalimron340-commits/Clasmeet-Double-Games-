@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Registrasi | NESEMBA E-SPORTS</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #080d18;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .result-card {
+            width: 100%;
+            max-width: 430px;
+            padding: 35px 25px;
+            text-align: center;
+            background: #111c30;
+            border: 1px solid #263b59;
+            border-radius: 20px;
+        }
+
+        .result-icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .result-card h1 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .result-card p {
+            color: #bdc9dc;
+            line-height: 1.6;
+        }
+
+        .result-button {
+            display: block;
+            margin-top: 25px;
+            padding: 14px;
+            background: #1677ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .result-button:hover {
+            background: #075dcc;
+        }
+
+        .error-detail {
+            margin-top: 15px;
+            color: #ff8585;
+            font-size: 13px;
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="result-card">
+        <div class="result-icon" id="result-icon">...</div>
+
+        <h1 id="result-title">Memeriksa hasil...</h1>
+
+        <p id="result-message">
+            Mohon tunggu sebentar.
+        </p>
+
+        <p class="error-detail" id="error-detail"></p>
+
+        <a href="../index.html" class="result-button">
+            KEMBALI KE BERANDA
+        </a>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get("status");
+        const reason = params.get("reason");
+
+        const icon = document.getElementById("result-icon");
+        const title = document.getElementById("result-title");
+        const message = document.getElementById("result-message");
+        const detail = document.getElementById("error-detail");
+
+        if (status === "success") {
+            icon.textContent = "✓";
+            icon.style.color = "#35e69a";
+            title.textContent = "REGISTRASI BERHASIL!";
+            message.textContent =
+                "Pendaftaran tim kamu berhasil dikirim ke sistem NESEMBA E-SPORTS.";
+        } else if (status === "failed") {
+            icon.textContent = "✕";
+            icon.style.color = "#ff6565";
+            title.textContent = "REGISTRASI GAGAL!";
+            message.textContent =
+                "Maaf, pendaftaran tim kamu belum berhasil diproses.";
+            detail.textContent = reason
+                ? "Keterangan: " + reason
+                : "Silakan periksa data dan coba kembali.";
+        } else {
+            icon.textContent = "?";
+            title.textContent = "HASIL TIDAK DITEMUKAN";
+            message.textContent =
+                "Tidak ada informasi hasil registrasi yang tersedia.";
+        }
+    </script>
+
+</body>
+</html>
